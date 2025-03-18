@@ -1,0 +1,21 @@
+A To-Do App has these main parts:
+
+Add Task – Create a new task.
+
+** View Tasks – See a list of tasks.
+
+Edit Task – Update a task.
+
+Delete Task – Remove a task.
+
+Mark as Done – Mark tasks as completed. - update/patch
+
+Optional:
+User Login – To save tasks per user.
+Reminders – Notify users about tasks.
+
+DB:
+Todo:
+- id
+- title
+- desc
