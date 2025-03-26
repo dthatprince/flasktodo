@@ -4,7 +4,9 @@ ________________________________________________________________________________
 
 ## Phase 1: Project Setup
 ✅ Set up a virtual environment (`venv`)
+
 ✅ Install dependencies (`Flask`, `Flask-RESTful`, `Flask-SQLAlchemy`, `Flask-JWT-Extended`)
+
 ✅ Initialize Git repository
 
 ---
