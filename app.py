@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 import db
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy import Integer, String
+from sqlalchemy import Boolean, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 from flask_migrate import Migrate
 
@@ -29,7 +29,7 @@ class Todo(db.Model):
     id: Mapped[int] = mapped_column(db.Integer, primary_key=True)
     title: Mapped[str] = mapped_column(db.String(250), nullable=False)
     desc: Mapped[str] = mapped_column(db.Text, nullable=False)
-    status = db.Column(db.Boolean, default=False)
+    status: Mapped[bool] = mapped_column(Boolean, default=False)
 
     def to_dict(self):
         return {"id": self.id, "title": self.title, "desc": self.desc, "status": self.status}
