@@ -1,18 +1,11 @@
 from flask import Flask, jsonify
-import db
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy import Boolean, Integer, String, Text
+from db import db
+from sqlalchemy import Boolean
 from sqlalchemy.orm import Mapped, mapped_column
 from flask_migrate import Migrate
 
+
 from flask_restful import Resource, Api
-import json
-
-class Base(DeclarativeBase):
-  pass
-
-db = SQLAlchemy(model_class=Base)
 
 app = Flask(__name__)
 api = Api(app)
@@ -33,9 +26,6 @@ class Todo(db.Model):
 
     def to_dict(self):
         return {"id": self.id, "title": self.title, "desc": self.desc, "status": self.status}
-
-
-
 
 
 class TodosApi(Resource):
