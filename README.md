@@ -1,3 +1,7 @@
+## Project Documentation
+[Project Documentation](https://github.com/dthatprince/flasktodo/blob/main/project_documentation.md)
+
+
 ## Installation & Setup
 
 ### 1. Clone the Repository
